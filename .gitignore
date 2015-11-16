@@ -1,0 +1,11 @@
+# Ignore node_modules
+node_modules/*
+
+# Ignore logs
+/npm-debug.log
+
+# Ignore local settings
+.idea
+*.ruby-version
+.DS_Store
+.nvmrc
