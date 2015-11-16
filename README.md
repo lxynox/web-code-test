@@ -43,7 +43,7 @@ The next step is to build the features of the application based on the user stor
         - The Article Categories view should be served from the route ```http://localhost:3000/#/{categoryId}/articles```
         - The Articles should be retrieved from the following REST endpoint ```http://localhost:3000/api/categories/{categoryId}/articles``` 
         - Each of the Articles displayed in the list should link to Article contents view (see below).
-- As a consumer, I would like to click on an article and see it's full contents.
+- As a consumer, I would like to click on an article and see its full contents.
     - Acceptance Criteria: 
         - Use the template ```client\mockups\article.html``` as a guide for the html and user experience for this view.
         - The Article contents view should be served from the route ```http://localhost:3000/#/articles/{articleId}```
