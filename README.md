@@ -64,7 +64,10 @@ The next step is to build the features of the application based on the user stor
             - Validation messages (span's with class "validation-msg") should appear next to the fields only if validation rules did not pass. 
 
 ### Submit Your Pull Request
-1. Push your branch up to Stash:
+1. Commit your changes to you local repository (if you haven't already):
+    >```git add .```
+    >```git commit -m"[your comments]"```
+2. Push your branch up to Stash:
     >```git push -u origin [lastname]_[firstname]_codetest```
-2. Create a Pull Request in Stash by following these instructions https://confluence.atlassian.com/display/STASH/Using+pull+requests+in+Stash#UsingpullrequestsinStash-Creatingapullrequest.
+3. Create a Pull Request in Stash by following these instructions https://confluence.atlassian.com/display/STASH/Using+pull+requests+in+Stash#UsingpullrequestsinStash-Creatingapullrequest.
 
