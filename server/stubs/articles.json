@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Kids More Crazy Than Ever",
+    "author": "Bob Dobbins",
     "publish_date": "2015-11-03",
     "category": {
       "id": 3,
@@ -12,6 +13,7 @@
   {
     "id": 2,
     "title": "People Eating More Fish",
+    "author": "Bob Dobbins",
     "publish_date": "2015-11-04",
     "category": {
       "id": 2,
@@ -22,6 +24,7 @@
   {
     "id": 3,
     "title": "President Now Likes Me",
+    "author": "Bob Dobbins",
     "publish_date": "2015-10-03",
     "category": {
       "id": 1,
@@ -32,6 +35,7 @@
   {
     "id": 4,
     "title": "I'm Going Back To My Roots",
+    "author": "Mary Tate",
     "publish_date": "2015-11-03",
     "category": {
       "id": 1,
@@ -42,6 +46,7 @@
   {
     "id": 5,
     "title": "Beets Good for You",
+    "author": "Mary Tate",
     "publish_date": "2015-11-11",
     "category": {
       "id": 2,
@@ -52,6 +57,7 @@
   {
     "id": 6,
     "title": "Doctors are Having Fun",
+    "author": "Jenny Perkins",
     "publish_date": "2015-11-03",
     "category": {
       "id": 3,
@@ -62,6 +68,7 @@
   {
     "id": 7,
     "title": "Families Not Liking Me",
+    "author": "Mary Tate",
     "publish_date": "2015-11-03",
     "category": {
       "id": 3,
@@ -72,6 +79,7 @@
   {
     "id": 8,
     "title": "Crime Rates Down",
+    "author": "Mary Tate",
     "publish_date": "2015-11-03",
     "category": {
       "id": 1,
@@ -82,6 +90,7 @@
   {
     "id": 9,
     "title": "New Church Opened",
+    "author": "Mary Tate",
     "publish_date": "2015-11-03",
     "category": {
       "id": 3,
