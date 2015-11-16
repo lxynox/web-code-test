@@ -64,7 +64,7 @@ The next step is to build the features of the application based on the user stor
             - Validation messages (span's with class "validation-msg") should appear next to the fields only if validation rules did not pass. 
 
 ### Submit Your Pull Request
-1. Commit your changes to you local repository (if you haven't already):
+1. Commit your changes to your local repository (if you haven't already):
     >```git add .```
     >```git commit -m"[your comments]"```
 2. Push your branch up to Stash:
