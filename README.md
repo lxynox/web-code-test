@@ -16,14 +16,14 @@ The test consists of a partially completed solution containing static html mocku
 
 ### Project Setup
 
-1. Clone the test project to you local machine:
-    >```*git clone ssh://git@stash.itriagehealth.com/ct/code_test_web_frontend.git*```
+1. Clone the test project to your local machine:
+    >```git clone ssh://git@stash.itriagehealth.com/ct/code_test_web_frontend.git```
 2. Create a branch for you:
     >```git checkout -b [lastname]_[firstname]_codetest```
 3. Install node dependencies:
-    >```*npm install*```
+    >```npm install```
 4. Run the Node Express web server:
-    >```*node server*```
+    >```node server```
 5. Test the site in a browser by going to ```http://localhost:3000/mockups```
 
 At this point you will see some static html pages that represent the User Experience (UX) and general flow for the application. 
