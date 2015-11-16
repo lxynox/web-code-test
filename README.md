@@ -66,5 +66,5 @@ The next step is to build the features of the application based on the user stor
 ### Submit Your Pull Request
 1. Push your branch up to Stash:
     >```git push -u origin [lastname]_[firstname]_codetest```
-2. Create a Pull Request in Stash by following these instructions (https://confluence.atlassian.com/display/STASH/Using+pull+requests+in+Stash#UsingpullrequestsinStash-Creatingapullrequest).
+2. Create a Pull Request in Stash by following these instructions https://confluence.atlassian.com/display/STASH/Using+pull+requests+in+Stash#UsingpullrequestsinStash-Creatingapullrequest.
 
