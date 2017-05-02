@@ -18,7 +18,7 @@ The test consists of a partially completed solution containing static html mocku
 ### Project Setup
 
 1. Clone the test project to your local machine:
-    >```git clone ssh://git@stash.itriagehealth.com/ct/code_test_web_frontend.git```
+    >```git clone git@github.com:itriage/web-code-test.git```
 2. Create a branch for you:
     >```git checkout -b [lastname]_[firstname]_codetest```
 3. Install node dependencies:
@@ -69,7 +69,7 @@ The next step is to build the features of the application based on the user stor
     >```git add .```
     
     >```git commit -m"[your comments]"```
-2. Push your branch up to Stash:
+2. Push your branch up to github:
     >```git push -u origin [lastname]_[firstname]_codetest```
-3. Create a Pull Request in Stash by following these instructions https://confluence.atlassian.com/display/STASH/Using+pull+requests+in+Stash#UsingpullrequestsinStash-Creatingapullrequest.
+3. Create a Pull Request in Github
 
