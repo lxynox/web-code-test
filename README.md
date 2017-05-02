@@ -69,7 +69,7 @@ The next step is to build the features of the application based on the user stor
     >```git add .```
     
     >```git commit -m"[your comments]"```
-2. Push your branch up to Stash:
+2. Push your branch up to github:
     >```git push -u origin [lastname]_[firstname]_codetest```
 3. Create a Pull Request in Github
 
