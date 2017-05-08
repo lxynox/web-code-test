@@ -11,6 +11,7 @@ render(
   document.getElementById('app')
 )
 
+// Service worker detection & registration
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('./service-worker.js')

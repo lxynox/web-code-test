@@ -1,27 +1,27 @@
 ### User Stories
 
-- [ ] As a consumer, I would like to be able to browse a list of article categories so I can find articles I'm interested in reading.
+- [ x] As a consumer, I would like to be able to browse a list of article categories so I can find articles I'm interested in reading.
     - Acceptance Criteria: 
         - Use the template ```client\mockups\index.html``` as a guide for the html and user experience for this view.
         - The Article Categories view should be served from the default route ```http://localhost:3000/#/```
         - The Categories data should be retrieved from the following REST endpoint ```http://localhost:3000/api/categories``` 
         - Each of the Articles displayed in the list should link to Articles list view (see below).
-- [ ] As a consumer, I would like to see a list of articles for a category I have selected. 
+- [ x] As a consumer, I would like to see a list of articles for a category I have selected. 
     - Acceptance Criteria: 
         - Use the template ```client\mockups\articles.html``` as a guide for the html and user experience for this view.
         - The Article Categories view should be served from the route ```http://localhost:3000/#/{categoryId}/articles```
         - The Articles should be retrieved from the following REST endpoint ```http://localhost:3000/api/categories/{categoryId}/articles``` 
         - Each of the Articles displayed in the list should link to Article contents view (see below).
-- [ ] As a consumer, I would like to click on an article and see its full contents.
+- [ x] As a consumer, I would like to click on an article and see its full contents.
     - Acceptance Criteria: 
         - Use the template ```client\mockups\article.html``` as a guide for the html and user experience for this view.
         - The Article contents view should be served from the route ```http://localhost:3000/#/articles/{articleId}```
         - The Articles contents be retrieved from the following REST endpoint ```http://localhost:3000/api/articles/{articleId}``` 
-- [ ] As a consumer, I would like some indication that I have read the article so I don't try to read the same article again.
+- [ x] As a consumer, I would like some indication that I have read the article so I don't try to read the same article again.
     - Acceptance Criteria: 
         - Use localStorage to store data on which articles are read by the consumer
         - If the article was read, the checkbox should appear in the article detail view, otherwise nothing should appear
-- [ ] As a consumer, I would like to submit new article requests
+- [x ] As a consumer, I would like to submit new article requests
     - Acceptance Criteria: 
         - Use the template ```client\mockups\suggestions.html``` as a guide for the html and user experience for this view.
         - The Article suggestions view should be served from the route ```http://localhost:3000/#/suggestions```

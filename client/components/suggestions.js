@@ -21,6 +21,11 @@ export default class Suggestions extends Component {
     }
   }
 
+  /**
+   * User action to submit the *suggestions* form
+   * @param  {[type]} e [description]
+   * @return {[type]}   [description]
+   */
   handleSubmit(e) {
     e.preventDefault()
 
@@ -48,6 +53,7 @@ export default class Suggestions extends Component {
     }
   }
 
+  // User input validation (name, email etc)
   _validate(input) {
     const {name, email, suggestion} = input
     let isValid = true

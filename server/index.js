@@ -75,6 +75,7 @@
     });
 
     app.get('/', function (req, res) {
+      // react-router v4 server side rendering
       const context = {}
       const markup = ReactDOMServer.renderToString(
         <StaticRouter

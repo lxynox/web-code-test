@@ -34,6 +34,11 @@ class App extends Component {
     }
   }
 
+  /**
+   * User action switch `active` tab
+   * @param  {[type]} tab [description]
+   * @return {[type]}     [description]
+   */
   handleClick(tab) {
     return e => {
       if (e.target.tagName === 'A') {

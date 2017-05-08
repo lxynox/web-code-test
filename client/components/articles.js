@@ -5,9 +5,10 @@ import * as store from '../store'
 
 const style = {
   table: {
-    overflow: 'scroll'
+
   }
 }
+
 export default class Articles extends Component {
   constructor(props) {
     super(props)
@@ -18,6 +19,7 @@ export default class Articles extends Component {
   }
 
   componentDidMount() {
+    // Async fetch articles by `categoryId`
     const {categoryId} = this.props.match.params
     const fetchArticles = async () => {
       let response
@@ -73,4 +75,3 @@ export default class Articles extends Component {
     )
   }
 }
-  // {article.title}, by {article.author}, on {article.publish_date}

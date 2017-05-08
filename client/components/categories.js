@@ -23,6 +23,7 @@ export default class Categories extends Component {
   }
 
   componentDidMount() {
+    // Async fetch categories
     const fetchCategories = async () => {
       let response
       const url = '/api/categories'

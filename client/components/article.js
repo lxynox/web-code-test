@@ -25,6 +25,7 @@ export default class Article extends Component {
   }
 
   componentDidMount() {
+    // Async fetch article by `articleId`
     const {articleId} = this.props.match.params
     const fetchArticle = async articleId => {
       let response
@@ -41,6 +42,7 @@ export default class Article extends Component {
   }
 
   componentWillUnmount() {
+    // LocalStorage to persist user already *read* books
     const {article, readArticles} = this.state
     if (article && readArticles.indexOf(article.id) === -1) {
       store.save([...readArticles, article.id])

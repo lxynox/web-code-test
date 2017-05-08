@@ -1,10 +1,23 @@
-# Code Test for Front End Web
+# Code Test for Front End We
 
-This code test will evaluate your abilities to develop a Single Page Application (SPA) using web technologies such as Javascript, HTML5 and CSS3. 
+This universal rendered mobile-friendly progressive web app(RWD and SPA as well) is deployed at: https://denvercodetestwebfrontend-bxcujkbfpe.now.sh powered by [now: realtime global deployments](https://zeit.co/now).
 
-While it is recommended that you develop this solution using AngularJs, you may choose a different Javascript framework, such as ReactJs or EmberJs. However, please bear in mind that we'd still like to see a fully working SPA solution. Therefore, your framework should have components for client-side routing, HTTP communication and DOM manipulation.
+Or, assuming `yarn`(node package manager locks deps and faster than `npm`) is installed (`npm install yarn -g`),  could be locally tested by:
 
-The test consists of a partially completed solution containing static html mockups. The mockups serve as a guide for the user experience. You must turn the static mocks into a working SPA by by following the instructions below.
+1. Dev mode. `yarn dev` with *hot reloading* and *hot module replacement* enabled by *webpack dev server*.
+2. Prod mode. `yarn start` and then manually navigates to: http://localhost:3000.
+
+## Tech stack
+
+* **React** for universal javascript (client side composition and SSR)
+* **React-Router-V4** for client side routering
+* **Service Worker** web api for offline first PWA (progressive web app)
+* **MDL** (material design lite) and **css-in-js** for quick styling with responsiveness
+* **Express** for static file serving and RESTful endpoints
+
+Each step of development can be told by git commit snapshots.
+
+---
 
 ## Getting Started
 
@@ -30,40 +43,6 @@ The test consists of a partially completed solution containing static html mocku
 At this point you will see some static html pages that represent the User Experience (UX) and general flow for the application. 
 The next step is to build the features of the application based on the user stories below:
 
-### User Stories
-
-- As a consumer, I would like to be able to browse a list of article categories so I can find articles I'm interested in reading.
-    - Acceptance Criteria: 
-        - Use the template ```client\mockups\index.html``` as a guide for the html and user experience for this view.
-        - The Article Categories view should be served from the default route ```http://localhost:3000/#/```
-        - The Categories data should be retrieved from the following REST endpoint ```http://localhost:3000/api/categories``` 
-        - Each of the Articles displayed in the list should link to Articles list view (see below).
-- As a consumer, I would like to see a list of articles for a category I have selected. 
-    - Acceptance Criteria: 
-        - Use the template ```client\mockups\articles.html``` as a guide for the html and user experience for this view.
-        - The Article Categories view should be served from the route ```http://localhost:3000/#/{categoryId}/articles```
-        - The Articles should be retrieved from the following REST endpoint ```http://localhost:3000/api/categories/{categoryId}/articles``` 
-        - Each of the Articles displayed in the list should link to Article contents view (see below).
-- As a consumer, I would like to click on an article and see its full contents.
-    - Acceptance Criteria: 
-        - Use the template ```client\mockups\article.html``` as a guide for the html and user experience for this view.
-        - The Article contents view should be served from the route ```http://localhost:3000/#/articles/{articleId}```
-        - The Articles contents be retrieved from the following REST endpoint ```http://localhost:3000/api/articles/{articleId}``` 
-- As a consumer, I would like some indication that I have read the article so I don't try to read the same article again.
-    - Acceptance Criteria: 
-        - Use localStorage to store data on which articles are read by the consumer
-        - If the article was read, the checkbox should appear in the article detail view, otherwise nothing should appear
-- As a consumer, I would like to submit new article requests
-    - Acceptance Criteria: 
-        - Use the template ```client\mockups\suggestions.html``` as a guide for the html and user experience for this view.
-        - The Article suggestions view should be served from the route ```http://localhost:3000/#/suggestions```
-        - To submit a suggestion, send a POST to the following endpoint ```http://localhost:3000/api/suggestions``` 
-        - After submitting the suggestion, you should display a label under the header for "Suggestions" saying, "Thanks! Your suggestion has been submitted"
-        - Client-Side Validation:
-            - All fields with "*" are required
-            - Email field should be a valid email format
-            - Validation messages (span's with class "validation-msg") should appear next to the fields only if validation rules did not pass. 
-
 ### Submit Your Pull Request
 1. Commit your changes to your local repository (if you haven't already):
     >```git add .```
@@ -72,4 +51,3 @@ The next step is to build the features of the application based on the user stor
 2. Push your branch up to github:
     >```git push -u origin [lastname]_[firstname]_codetest```
 3. Create a Pull Request in Github
-
