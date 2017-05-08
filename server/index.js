@@ -85,7 +85,7 @@
         </StaticRouter>
       )
 
-      fs.readFile(path.resolve(__dirname, '../client/index.html'), 'utf8', (err, template) => {
+      fs.readFile(path.resolve(__dirname, '../client/index.ejs'), 'utf8', (err, template) => {
         if (err) {
           console.error(err)
           return res.status(502).send(err.message)

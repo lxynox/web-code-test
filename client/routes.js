@@ -7,7 +7,7 @@ import Articles from './components/articles'
 import Suggestions from './components/suggestions'
 
 const Routes = () => (
-  <div>
+  <div className="content">
     <Route exact path="/" component={Categories}/>
     <Route path="/:categoryId/articles" component={Articles}/>
     <Route path="/articles/:articleId" component={Article}/>

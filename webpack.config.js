@@ -5,10 +5,11 @@ const resolve = p => path.resolve(__dirname, p)
 
 module.exports = {
   entry: [
+    'babel-polyfill',
     resolve('client/main.js')
   ],
   output: {
-    publicPath: '/', // Served from `http://localhost:8080/client/`
+    publicPath: '/build', // Served from `http://localhost:8080/client/build`
     path: resolve('client/build'),
     filename: 'bundle.js'
   },

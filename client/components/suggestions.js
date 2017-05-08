@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 
 const style = {
-  validationMsg: {
-    display: 'none',
-    color: 'red'
+  succeedLabel: {
+    width: '50%',
+    padding: '6px',
+    backgroundColor: 'lightgreen',
+    borderRadius: '5px 5px 5px 5px'
   }
 }
 
@@ -92,29 +94,30 @@ export default class Suggestions extends Component {
   }
 
   render() {
-    const {invalidName, invalidEmail, invalidSuggestion, succeedLabelText} = this.state
+    const {succeedLabelText} = this.state
     return (
       <div id="content">
         <h2>Suggestions</h2>
-        <p className="">{succeedLabelText}</p>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <div>
-            <label>Name*</label><br/>
-            <input name="name" type="text"/>
-            <span style={{...style.validationMsg, display: invalidName ? 'inline' : 'none'}} className="">Name is required</span>
+        {succeedLabelText &&
+          <p><span style={style.succeedLabel}>{succeedLabelText}</span></p>}
+        <form className="mdl-grid" onSubmit={this.handleSubmit.bind(this)}>
+          <div className="mdl-cell mdl-cell--2-offset-desktop mdl-cell--2-offset-tablet mdl-textfield mdl-js-textfield">
+            <label className="mdl-textfield__label" htmlFor="name">Names*</label><br/>
+            <input required className="mdl-textfield__input" id="name" name="name" type="text"/>
+            <span className="mdl-textfield__error">Name is required</span>
           </div>
-          <div>
-            <label>Email</label><br/>
-            <input name="email" type="text"/>
-            <span style={{...style.validationMsg, display: invalidEmail ? 'inline' : 'none'}} className="">Must be a valid email</span>
+          <div className="mdl-cell mdl-cell--2-offset-tablet mdl-textfield mdl-js-textfield">
+            <label className="mdl-textfield__label" htmlFor="email">Email</label><br/>
+            <input className="mdl-textfield__input" id="email" name="email" pattern="\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}" type="text"/>
+            <span className="mdl-textfield__error">Must be a valid email</span>
           </div>
-          <div>
-            <label>Suggestion*</label><br/>
-            <textarea name="suggestion"/>
-            <span style={{...style.validationMsg, display: invalidSuggestion ? 'inline' : 'none'}} className="">Suggestion is required</span>
+          <div className="mdl-cell mdl-cell--2-offset-desktop mdl-cell--2-offset-tablet mdl-cell--8-col-desktop mdl-textfield mdl-js-textfield">
+            <label className="mdl-textfield__label" htmlFor="suggestion">Suggestion*</label><br/>
+            <textarea required className="mdl-textfield__input" id="suggestion" name="suggestion"/>
+            <span className="mdl-textfield__error">Suggestion is required</span>
           </div>
-          <div>
-            <button type="submit">Send</button>
+          <div className="mdl-cell md-cell--2-offset-desktop mdl-textfield">
+            <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="submit">Send</button>
           </div>
         </form>
       </div>

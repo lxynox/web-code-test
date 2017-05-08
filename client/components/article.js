@@ -3,6 +3,17 @@ import {Link} from 'react-router-dom'
 
 import * as store from '../store'
 
+const style = {
+  article: {
+    body: {
+      width: '80%',
+      marginLeft: '10%',
+      marginTop: '20px',
+      textAlign: 'left'
+    }
+  }
+}
+
 export default class Article extends Component {
   constructor(props) {
     super(props)
@@ -37,10 +48,10 @@ export default class Article extends Component {
     return (
       <div id="content">
         {article ?
-          <article className="article">
+          <article style={style.article}>
             <h2>{article.title}</h2>
 
-            <p>by <em>{article.author}</em>, on <em>{article.publish_date}</em>
+            <p>by <em>{article.author}</em>, on <em>{article.publish_date}</em>,
               {isRead &&
                 <label>
                   <input
@@ -53,11 +64,11 @@ export default class Article extends Component {
 
             <p>Category
               <Link to={`/${article.category.id}/articles`}>
-                {article.category.title}
+                {`⎡${article.category.title}⎦`}
               </Link>
             </p>
 
-            <div className="article-body" dangerouslySetInnerHTML={{__html: article.content}}/>
+            <div style={style.article.body} dangerouslySetInnerHTML={{__html: article.content}}/>
           </article> : null}
       </div>
     )
