@@ -20,7 +20,12 @@ export default class Articles extends Component {
   componentDidMount() {
     const {categoryId} = this.props.match.params
     const fetchArticles = async () => {
-      const response = await fetch(`/api/categories/${categoryId}/articles`)
+      let response
+      const url = `/api/categories/${categoryId}/articles`
+      if ('caches' in window) {
+        response = await caches.match(url)
+      }
+      response = response || await fetch(url)
       const articles = await response.json()
       this.setState({articles})
     }

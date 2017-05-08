@@ -27,7 +27,12 @@ export default class Article extends Component {
   componentDidMount() {
     const {articleId} = this.props.match.params
     const fetchArticle = async articleId => {
-      const response = await fetch(`/api/articles/${articleId}`)
+      let response
+      const url = `/api/articles/${articleId}`
+      if ('caches' in window) {
+        response = await caches.match(url)
+      }
+      response = response || await fetch(url)
       const article = await response.json()
       this.setState({article})
     }
@@ -37,7 +42,7 @@ export default class Article extends Component {
 
   componentWillUnmount() {
     const {article, readArticles} = this.state
-    if (readArticles.indexOf(article.id) === -1) {
+    if (article && readArticles.indexOf(article.id) === -1) {
       store.save([...readArticles, article.id])
     }
   }

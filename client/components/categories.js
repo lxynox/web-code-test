@@ -24,7 +24,12 @@ export default class Categories extends Component {
 
   componentDidMount() {
     const fetchCategories = async () => {
-      const response = await fetch('/api/categories')
+      let response
+      const url = '/api/categories'
+      if ('caches' in window) {
+        response = await caches.match(url)
+      }
+      response = response || await fetch(url)
       const categories = await response.json()
       this.setState({
         categories
