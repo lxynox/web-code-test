@@ -1,10 +1,10 @@
-# Code Test for Front End We
+# Code Test for Front End Web
 
 This universal rendered mobile-friendly progressive web app(RWD and SPA as well) is deployed at: https://denvercodetestwebfrontend-bxcujkbfpe.now.sh powered by [now: realtime global deployments](https://zeit.co/now).
 
 Or, assuming `yarn`(node package manager locks deps and faster than `npm`) is installed (`npm install yarn -g`),  could be locally tested by:
 
-1. Dev mode. `yarn dev` with *hot reloading* and *hot module replacement* enabled by *webpack dev server*.
+1. Dev mode. `node server; yarn dev` with *hot reloading* and *hot module replacement* enabled by *webpack dev server*.
 2. Prod mode. `yarn start` and then manually navigates to: http://localhost:3000.
 
 ## Tech stack

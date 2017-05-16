@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 
+import * as api from '../api'
+
 const style = {
   container: {
     width: '100%',
@@ -24,20 +26,10 @@ export default class Categories extends Component {
 
   componentDidMount() {
     // Async fetch categories
-    const fetchCategories = async () => {
-      let response
-      const url = '/api/categories'
-      if ('caches' in window) {
-        response = await caches.match(url)
-      }
-      response = response || await fetch(url)
-      const categories = await response.json()
-      this.setState({
-        categories
-      })
-    }
-
-    fetchCategories()
+    const url = '/api/categories'
+    api.fetch(url)
+      .then(categories => this.setState({categories}))
+      .catch(err => console.error(err))
   }
 
   render() {
