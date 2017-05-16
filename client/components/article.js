@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 
 import * as store from '../store'
+import * as api from '../api'
 
 const style = {
   article: {
@@ -27,18 +28,10 @@ export default class Article extends Component {
   componentDidMount() {
     // Async fetch article by `articleId`
     const {articleId} = this.props.match.params
-    const fetchArticle = async articleId => {
-      let response
-      const url = `/api/articles/${articleId}`
-      if ('caches' in window) {
-        response = await caches.match(url)
-      }
-      response = response || await fetch(url)
-      const article = await response.json()
-      this.setState({article})
-    }
-
-    fetchArticle(articleId)
+    const url = `/api/articles/${articleId}`
+    api.fetch(url)
+      .then(article => this.setState({article}))
+      .catch(err => console.error(err))
   }
 
   componentWillUnmount() {

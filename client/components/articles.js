@@ -2,11 +2,10 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 
 import * as store from '../store'
+import * as api from '../api'
 
 const style = {
-  table: {
-
-  }
+  table: {}
 }
 
 export default class Articles extends Component {
@@ -21,18 +20,10 @@ export default class Articles extends Component {
   componentDidMount() {
     // Async fetch articles by `categoryId`
     const {categoryId} = this.props.match.params
-    const fetchArticles = async () => {
-      let response
-      const url = `/api/categories/${categoryId}/articles`
-      if ('caches' in window) {
-        response = await caches.match(url)
-      }
-      response = response || await fetch(url)
-      const articles = await response.json()
-      this.setState({articles})
-    }
-
-    fetchArticles(categoryId)
+    const url = `/api/categories/${categoryId}/articles`
+    api.fetch(url)
+      .then(articles => this.setState({articles}))
+      .catch(err => console.error(err))
   }
 
   render() {
