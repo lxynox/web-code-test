@@ -7,6 +7,10 @@
     var app = express();
     var port = process.env.PORT || 3000;
 
+    var React = require('react')
+    var ReactDOMServer = require('react-dom/server')
+    var StaticRouter = require('react-router').StaticRouter
+    var App = require('../client/app').default
 
     app.use(express.static(path.resolve(__dirname, '../client')));
 
@@ -49,7 +53,7 @@
     });
 
     app.post('/api/suggestions', function (req, res) {
-        return res.send(201).json({message: 'Thanks! Your suggestion has been submitted.'});
+        return res.status(201).json({message: 'Thanks! Your suggestion has been submitted.'});
     });
 
     //--------Page routes------------//
@@ -71,7 +75,25 @@
     });
 
     app.get('/', function (req, res) {
-        res.sendFile('index.html');
+      // react-router v4 server side rendering
+      const context = {}
+      const markup = ReactDOMServer.renderToString(
+        <StaticRouter
+          location={req.url}
+          context={context}
+        >
+          <App/>
+        </StaticRouter>
+      )
+
+      fs.readFile(path.resolve(__dirname, '../client/index.ejs'), 'utf8', (err, template) => {
+        if (err) {
+          console.error(err)
+          return res.status(502).send(err.message)
+        }
+        const interpolated = template.replace('<div id="app"><%=ssr%></div>', `<div id="app">${markup}</div>`)
+        res.end(interpolated)
+      })
     });
 
 }());

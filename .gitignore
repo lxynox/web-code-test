@@ -3,10 +3,10 @@ node_modules/*
 
 # Ignore logs
 /npm-debug.log
+yarn-error.log
 
 # Ignore local settings
 .idea
 *.ruby-version
 .DS_Store
 .nvmrc
-

@@ -2,14 +2,63 @@
   "name": "denver_codetest_web_frontend",
   "version": "1.0.0",
   "description": "Code test for web --front end",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
+    "lint": "xo",
+    "dev": "webpack-dev-server --open --hot",
+    "build": "NODE_ENV=production webpack --progress --hide-modules",
+    "start": "babel-node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "xo": {
+    "extends": "xo-react",
+    "esnext": true,
+    "space": true,
+    "semicolon": false,
+    "env": [
+      "browser",
+      "node"
+    ],
+    "rules": {
+      "new-cap": 0,
+      "react/prop-types": 0,
+      "react/jsx-no-bind": 0,
+      "react/no-danger": 0
+    },
+    "overrides": [],
+    "ignore": [
+      "server/**",
+      "client/build/**"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "stage-3",
+      "react",
+      "es2015"
+    ]
+  },
+  "author": "Xuanyu",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "eslint-config-xo-react": "^0.11.1",
+    "eslint-plugin-react": "^7.0.0",
+    "webpack": "^2.5.0",
+    "webpack-dev-server": "^2.4.5",
+    "xo": "^0.18.2"
   }
 }
