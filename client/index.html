@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>web code test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- vendor cdn: material design lite -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/assets/material.min.css">
+    <script defer src="/assets/material.min.js"></script>
+    <!-- pwa -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="webcodetest pwa">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+      }
+      h2 {
+        color: blueviolet;
+      }
+      #app {
+        width: 80vw;
+        height: 100%;
+        text-align: center;
+      }
+      #app .content {
+        border-top: 10px solid blueviolet;
+        padding-top: 25px;
+        background-color: rgba(142, 141, 139, 0.1);
+      }
+      #app nav ul li span a {
+        color: #ccc;
+        display: inline-block;
+        height: 100%;
+      }
+      @media only screen and (max-width: 512px) {
+        h1 {
+          font-size: 2em;
+        }
+        h2 {
+          font-size: 1.6em;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div id="app"><%=ssr%></div>
+    <script type="text/javascript" src="/build/bundle.js"></script>
+</body>
+</html>
