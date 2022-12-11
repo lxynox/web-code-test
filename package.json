@@ -39,7 +39,7 @@
   "author": "Xuanyu",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.3",
+    "express": "^4.17.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
